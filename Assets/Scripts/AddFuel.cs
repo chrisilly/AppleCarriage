@@ -8,6 +8,12 @@ public class AddFuel : MonoBehaviour
     {
         carController.fuel += 0.3f;
         carController.fuelCollected++;
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
+
+    public void Reset()
+    {
+        gameObject.SetActive(true);
+    }
+
 }
